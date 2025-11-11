@@ -239,7 +239,7 @@ paths:
                     example: 'https://test-api.service.hmrc.gov.uk/obligations/declaration/isa/return/monthly/Z1234/results/summary'
                   boxId:
                     type: string
-                    format: guid
+                    format: uuid
                     description: Unique identifier of the PPNS box in use for notifications.
                     example: "1c5b9365-18a6-55a5-99c9-83a091ac7f26"
         400:
@@ -629,13 +629,11 @@ components:
           format: double
           description: Total value transferred in.
           example: 3000.00
-          pattern: ^\d+\.\d{2}$
         amountTransferredOut:
           type: number
           format: double
           description: Total value transferred out.
           example: 3000.00
-          pattern: ^\d+\.\d{2}$
         dateOfLastSubscription:
           type: string
           format: date
@@ -647,13 +645,11 @@ components:
           format: double
           description: Total value of current-year subscriptions to the ISA account.
           example: 5000.00
-          pattern: ^\d+\.\d{2}$
         marketValueOfAccount:
           type: number
           format: double
           description: The market value of the ISA account.
           example: 10000.00
-          pattern: ^\d+\.\d{2}$
     investorDetails:
         title: Investor Details
         type: object
@@ -680,13 +676,11 @@ components:
                     format: double
                     description: The amount of the current subscription that qualifies for a LISA bonus.
                     example: 1000.00
-                    pattern: ^-?\d+\.\d{2}$
                   lisaBonusClaim:
                     type: number
                     format: double
                     description: The amount being claimed as a LISA bonus.
                     example: 1000.00
-                    pattern: ^-?\d+\.\d{2}$
                 required: [ isaType, dateOfFirstSubscription, lisaQualifyingAddition, lisaBonusClaim, amountTransferredIn, amountTransferredOut ]
           - title: Lifetime ISA - Closure
             allOf:
@@ -725,13 +719,11 @@ components:
                     format: double
                     description: The amount of the current subscription that qualifies for a LISA bonus.
                     example: 1000.00
-                    pattern: ^-?\d+\.\d{2}$
                   lisaBonusClaim:
                     type: number
                     format: double
                     description: The amount being claimed as a LISA bonus.
                     example: 1000.00
-                    pattern: ^-?\d+\.\d{2}$
                 required: [ isaType, dateOfFirstSubscription, closureDate, reasonForClosure, lisaQualifyingAddition, lisaBonusClaim ]
           - title: Standard ISA - Subscription
             allOf:
@@ -813,7 +805,6 @@ components:
           format: double
           description: The amount that was over-subscribed.
           example: 1000.00
-          pattern: ^\d+\.\d{2}$
     returnResultUnableToIdentifyInvestor:
       type: object
       properties:
