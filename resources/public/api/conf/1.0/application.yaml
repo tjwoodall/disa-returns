@@ -85,7 +85,7 @@ paths:
       tags:
         - Submit monthly report
       security:
-        - userRestricted:
+        - User-Restricted:
             - write:isa-returns
       parameters:
         - name: zReference
@@ -229,7 +229,7 @@ paths:
       tags:
         - Submit monthly report
       security:
-        - userRestricted:
+        - User-Restricted:
             - write:isa-returns
       parameters:
         - name: zReference
@@ -393,7 +393,7 @@ paths:
       tags:
         - Check report results
       security:
-        - userRestricted:
+        - User-Restricted:
             - read:isa-returns
       parameters:
         - name: zReference
@@ -542,7 +542,7 @@ paths:
       tags:
         - Check report results
       security:
-        - userRestricted:
+        - User-Restricted:
             - read:isa-returns
       parameters:
         - name: zReference
@@ -702,7 +702,7 @@ paths:
                     example: "Unexpected Error"
 components:
   securitySchemes:
-    userRestricted:
+    User-Restricted:
       type: oauth2
       description: |
         HMRC uses OAuth 2.0 Bearer tokens for authentication. Include the token in the AUTHORIZATION header of user-restricted API requests.
