@@ -26,9 +26,9 @@ info:
     HMRC's Software Developers Support Team will reply within two working days.
 
 servers:
-  - url: https://test-api.service.hmrc.gov.uk/obligations/declaration/isa/return
+  - url: https://test-api.service.hmrc.gov.uk
     description: Sandbox
-  - url: https://api.service.hmrc.gov.uk/obligations/declaration/isa/return
+  - url: https://api.service.hmrc.gov.uk
     description: Production
 
 tags:
@@ -53,7 +53,7 @@ tags:
       Results are paginated to support large datasets.
 
 paths:
-  /monthly/{zReference}:
+  /obligations/declaration/isa/return//monthly/{zReference}:
     post:
       summary: Submit monthly report data
       description: |
@@ -170,7 +170,7 @@ paths:
                   message:
                     type: string
                     example: "Unexpected Error"
-  /monthly/{zReference}/declaration:
+  /obligations/declaration/isa/return/monthly/{zReference}/declaration:
     post:
       summary: Declare monthly report as complete
       description: |
@@ -306,7 +306,7 @@ paths:
                   message:
                     type: string
                     example: "Unexpected Error"
-  /monthly/{zReference}/results/summary:
+  /obligations/declaration/isa/return/monthly/{zReference}/results/summary:
     get:
       summary: Get report summary
       description: |
@@ -418,7 +418,7 @@ paths:
                     type: string
                     example: "Unexpected Error"
 
-  /monthly/{zReference}/results:
+  /obligations/declaration/isa/return/monthly/{zReference}/results:
     get:
       summary: Get report reconciliation results
       description: |
