@@ -1092,6 +1092,7 @@ components:
           enum:
             - REPORTING_WINDOW_CLOSED
             - OBLIGATION_CLOSED
+            - RESOURCE_FORBIDDEN
         message:
           title: Message
           type: string
