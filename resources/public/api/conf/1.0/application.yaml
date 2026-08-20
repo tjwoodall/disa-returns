@@ -53,7 +53,7 @@ tags:
       Results are paginated to support large datasets.
 
 paths:
-  /obligations/declaration/isa/return//monthly/{zReference}:
+  /obligations/declaration/isa/return/monthly/{zReference}:
     post:
       summary: Submit monthly report data
       description: |
