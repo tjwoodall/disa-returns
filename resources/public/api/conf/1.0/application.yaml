@@ -108,7 +108,7 @@ paths:
           explode: false
           schema:
             pattern: ^20\d{2}-\d{2}$
-            format: string
+            type: string
             example: 2025-26
         - name: month
           in: path
@@ -252,7 +252,7 @@ paths:
           explode: false
           schema:
             pattern: ^20\d{2}-\d{2}$
-            format: string
+            type: string
             example: 2025-26
         - name: month
           in: path
@@ -416,7 +416,7 @@ paths:
           explode: false
           schema:
             pattern: ^20\d{2}-\d{2}$
-            format: string
+            type: string
             example: 2025-26
         - name: month
           in: path
@@ -565,7 +565,7 @@ paths:
           explode: false
           schema:
             pattern: ^20\d{2}-\d{2}$
-            format: string
+            type: string
             example: 2025-26
         - name: month
           in: path
